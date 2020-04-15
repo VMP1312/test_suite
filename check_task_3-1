@@ -1,0 +1,14 @@
+#!/bin/bash
+# This a second test for test the same simple_shell
+gcc -Wall -Werror -Wextra -pedantic simple_shell/*.c -o hsh
+echo -e "\033[34mtesting case /bin/ls \033[0m"
+echo "/bin/ls" | /bin/sh > original
+echo "/bin/ls" | ./hsh > yourShell
+diff original yourShell > testing
+if [ -s testing ]
+then 
+    echo -e "\033[31mcheck fail \033[0m"
+else
+    echo -e "\033[32mcheck success \033[0m"
+    fi 
+rm -rf original yourShell hsh
