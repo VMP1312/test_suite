@@ -1,0 +1,22 @@
+#!/bin/bash
+# This is a thes for try the files README.md, AUTHORS and man
+if [ -f simple_shell/README.md ];
+then
+    echo -e "\033[32mYes, README.md exist.\033[0m"
+else
+    echo -e "\033[31mNo, README.md doesn't exist.\033[0m"
+fi
+
+if [ -f simple_shell/AUTHORS ];
+then
+    echo -e "\033[32mYes, AUTHORS exist.\033[0m"
+else
+    echo -e "\033[31mNo, AUTHORS doesn't exist.\033[0m"
+fi
+
+if [ -f simple_shell/man_1_simple_shell ];
+then
+    echo -e "\033[32mYes, man_1_simple_shell exist.\033[0m"
+else
+    echo -e "\033[31mNo, man_1_simple_shell doesn't exist.\033[0m"
+fi
